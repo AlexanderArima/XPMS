@@ -50,9 +50,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sql\mssql\CommandInfo.cs" />
     <Compile Include="Sql\mssql\DbHelperSQL.cs" />
-    <Compile Include="Sql\redis\RedisCommand.cs" />
-    <Compile Include="Sql\redis\RedisConfig.cs" />
-    <Compile Include="Sql\redis\RedisManager.cs" />
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

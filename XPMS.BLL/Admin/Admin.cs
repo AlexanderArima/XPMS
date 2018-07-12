@@ -9,19 +9,19 @@ namespace XPMS.BLL.Admin
 {
     public class Admin
     {
-        static DAL.Admin _admin = new DAL.Admin();
+        static DAL.Admin _dal = new DAL.Admin();
 
         public T_Admin Get(string Name,string Password,int IsLock,DateTime LockTime)
         {
             if (IsLock == 0)
             {
                 //未被锁定
-                return _admin.Get(Name, Password);
+                return _dal.Get(Name, Password);
             }
             else if(IsLock == 1 && (DateTime.Now - LockTime).Minutes > 30)
             {
                 //已被锁定，但锁定时间过期
-                return _admin.Get(Name, Password);
+                return _dal.Get(Name, Password);
             }
             else if(Name.Length <= 0 && Password.Length <= 0)
             {
@@ -49,7 +49,7 @@ namespace XPMS.BLL.Admin
             {
                 throw new ArgumentException("密码不能为空");
             }
-            var flag = _admin.Insert(Name, Password);
+            var flag = _dal.Insert(Name, Password);
             if (flag)
             {
                 return true;

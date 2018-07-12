@@ -42,9 +42,14 @@
   <ItemGroup>
     <Compile Include="Admin\Admin.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Hotel\RoomType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\XPMS.Common\XPMS.Common.csproj">
+      <Project>{d3f49226-4c7a-4d55-8279-ecb3ebc80a55}</Project>
+      <Name>XPMS.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\XPMS.DAL\XPMS.DAL.csproj">
       <Project>{c3d278bd-12a5-4f7b-8d41-24a423442970}</Project>
       <Name>XPMS.DAL</Name>
@@ -54,5 +59,6 @@
       <Name>XPMS.Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
